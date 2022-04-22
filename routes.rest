@@ -1,0 +1,25 @@
+GET http://localhost:5000/subscribers
+
+###
+GET http://localhost:5000/subscribers/1556
+
+###
+POST http://localhost:5000/subscribers
+Content-Type: application/json
+
+{
+    "name": "To you birdth",
+    "subscribedToChannel": "Web Design node Js"
+}
+
+###
+DELETE http://localhost:5000/subscribers/62628cf596289806260fdc5a
+
+###
+PATCH  http://localhost:5000/subscribers/62628c5a96289806260fdc58
+Content-Type: application/json
+
+{
+    
+    "subscribedToChannel": "Camping"
+}
