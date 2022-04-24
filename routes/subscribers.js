@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const Subscriber = require('../models/subscriber')
 
+
 // Getting all
 router.get('/', async (req, res) => {
   try {
@@ -21,7 +22,8 @@ router.get('/:id', getSubscriber, (req, res) => {
 router.post('/', async (req, res) => {
   const subscriber = new Subscriber({
     name: req.body.name,
-    subscribedToChannel: req.body.subscribedToChannel
+    username: req.body.username,
+    password:req.body.password
   })
   try {
     const newSubscriber = await subscriber.save()
